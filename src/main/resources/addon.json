@@ -1,0 +1,8 @@
+{
+  "uuid": "%uuid%",
+  "name": "Pawii Casino Addon",
+  "mainClass": "me.casinoaddon.CasinoAddon",
+  "author": "Sumbora",
+  "description": "Dieses Addon berechnet den Wert von Casino Gewinnen in Inventaren, des Weiteren kann es dir eine Liste mit Spielern in deiner Naehe anzeigen",
+  "icon": "https://cdn.discordapp.com/attachments/1019708422054228020/1109093197910642719/png_2.png"
+}
