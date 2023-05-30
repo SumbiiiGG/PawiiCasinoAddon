@@ -8,6 +8,9 @@ import java.util.regex.Pattern;
 
 public class ItemValueScanner {
     public long determineValue(ItemStack stack) {
+        if(stack == null){
+            return 0;
+        }
         return stack.stackSize * determineValueSingleItem(stack);
     }
 
@@ -20,6 +23,9 @@ public class ItemValueScanner {
         }
         String sign = "0$";
         try {
+            if(stack.getTagCompound() == null || stack.getTagCompound().getCompoundTag("display") == null || stack.getTagCompound().getCompoundTag("display").getTag("Lore") == null){
+                return 0;
+            }
             String[] lore = stack.getTagCompound().getCompoundTag("display").getTag("Lore").toString().split("\",");
             for (int i = 0; i < lore.length; i++) {
                 if (lore[i].contains("Signiert von")) {
